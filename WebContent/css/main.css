@@ -1,0 +1,378 @@
+/* ==========================================================================
+  IMPORTS
+========================================================================== */
+/* ==========================================================================
+  MEDIA QUERY MANAGER
+========================================================================== */
+/* ==========================================================================
+  COLOR VARIABLES
+========================================================================== */
+/* ==========================================================================
+  BREAKPOINTS
+========================================================================== */
+/* ==========================================================================
+  FONTS
+========================================================================== */
+/* ==========================================================================
+  BASIC BODY STYLING
+========================================================================== */
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #F5F5F5;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0; }
+
+/* ==========================================================================
+  HEADER STYLING
+========================================================================== */
+header {
+  height: 7.5vh;
+  width: 85%;
+  margin: 0 auto; }
+  header nav {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header nav h1 {
+      letter-spacing: 1px;
+      font-weight: 500;
+      margin: 0;
+      font-family: 'Roboto Mono', monospace; }
+      header nav h1 a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black; }
+      header nav h1 .big {
+        font-size: 3.5rem; }
+      header nav h1 .small {
+        font-size: 2.5rem; }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0; }
+      header nav ul li {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.35rem;
+        letter-spacing: 1px; }
+        header nav ul li:first-child {
+          margin: 0 40px 0 0; }
+        header nav ul li a {
+          text-decoration: none;
+          color: black; }
+
+/* ==========================================================================
+  LANDING STYLING
+========================================================================== */
+.landing-content {
+  height: 87.5vh;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  .landing-content_col-1 {
+    width: 45%; }
+    .landing-content_col-1-info-box p {
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0; }
+    .landing-content_col-1-control-box .simulation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 100px 0; }
+      .landing-content_col-1-control-box .simulation h1 {
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        margin: 0 30px 0 0; }
+      .landing-content_col-1-control-box .simulation button {
+        margin: 0 7.5px;
+        padding: 10px 70px;
+        font-size: 1.35rem;
+        letter-spacing: 1px;
+        cursor: pointer; }
+  .landing-content_col-2 {
+    width: 45%; }
+    .landing-content_col-2 .parkhaus {
+      width: 100%; }
+      .landing-content_col-2 .parkhaus h1 {
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        margin: 0 0 30px 0; }
+      .landing-content_col-2 .parkhaus .parkplaetze {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 33px;
+        margin: 0 0 100px 0; }
+        .landing-content_col-2 .parkhaus .parkplaetze .parkplatz {
+          width: 135px;
+          height: 65px; }
+          .landing-content_col-2 .parkhaus .parkplaetze .parkplatz.frei {
+            background: #DCDCDC; }
+          .landing-content_col-2 .parkhaus .parkplaetze .parkplatz.belegt {
+            background: #3c5fc9; }
+    .landing-content_col-2 .status-box {
+      width: 100%; }
+      .landing-content_col-2 .status-box h1 {
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        margin: 0 0 30px 0; }
+      .landing-content_col-2 .status-box table {
+        width: 100%;
+        font-size: 1.05rem; }
+        .landing-content_col-2 .status-box table tr {
+          padding: 0;
+          margin: 0; }
+          .landing-content_col-2 .status-box table tr th {
+            font-size: bold;
+            padding: 12px;
+            background-color: #DCDCDC;
+            text-align: left; }
+          .landing-content_col-2 .status-box table tr td {
+            padding: 12px;
+            margin: 0;
+            border: none; }
+          .landing-content_col-2 .status-box table tr:nth-child(even) {
+            background-color: #DCDCDC; }
+
+/* ==========================================================================
+  DASHBOARD STYLING
+========================================================================== */
+.dashboard {
+  height: 82vh;
+  width: 85%;
+  margin: 2.5vh auto 3vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .dashboard_col-1 {
+    width: 47.5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .dashboard_col-1_rowBig {
+      background-color: #fff;
+      box-shadow: 10px 15px 15px #d7d7d7;
+      border-radius: 3px;
+      width: 100%;
+      padding: 30px 40px 30px 40px;
+      margin: 0 0 40px 0; }
+      .dashboard_col-1_rowBig .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #000;
+        padding: 0 0 15px 0;
+        margin: 0 0 30px 0; }
+        .dashboard_col-1_rowBig .head h2 {
+          font-size: 1.35rem;
+          letter-spacing: 1px;
+          line-height: 1;
+          margin: 0; }
+        .dashboard_col-1_rowBig .head i {
+          font-size: 1.35rem; }
+      .dashboard_col-1_rowBig form {
+        position: relative; }
+        .dashboard_col-1_rowBig form label {
+          display: inline-block;
+          font-size: 1.2rem;
+          width: 150px; }
+        .dashboard_col-1_rowBig form input {
+          padding: 7.5px 5px;
+          border: 0.5px solid #202020;
+          font-size: .9rem;
+          letter-spacing: 1px;
+          text-align: right; }
+          .dashboard_col-1_rowBig form input.send {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #3559c7;
+            padding: 10px 50px;
+            border: none;
+            color: #fff;
+            font-size: 1.05rem;
+            cursor: pointer; }
+        .dashboard_col-1_rowBig form input::-webkit-inner-spin-button {
+          margin-left: 10px; }
+        .dashboard_col-1_rowBig form div {
+          padding: 5px 0; }
+          .dashboard_col-1_rowBig form div label {
+            width: 280px; }
+    .dashboard_col-1_rowSmall {
+      background-color: #fff;
+      box-shadow: 10px 15px 15px #d7d7d7;
+      border-radius: 3px;
+      width: 25%;
+      height: 150px;
+      position: relative;
+      padding: 30px 40px 30px 40px;
+      margin: 0 0px 40px 0; }
+      .dashboard_col-1_rowSmall .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #000;
+        padding: 0 0 15px 0; }
+        .dashboard_col-1_rowSmall .head h2 {
+          font-size: 1.35rem;
+          letter-spacing: 1px;
+          line-height: 1;
+          margin: 0; }
+        .dashboard_col-1_rowSmall .head i {
+          font-size: 1.35rem; }
+      .dashboard_col-1_rowSmall p {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-55%, 0);
+        font-size: 1.35rem;
+        letter-spacing: 1px;
+        line-height: 1;
+        margin: 0; }
+      .dashboard_col-1_rowSmall:last-of-type {
+        margin: 0 0px 40px 30px; }
+    .dashboard_col-1 a {
+      background: rgba(160, 0, 0, 0.85);
+      box-shadow: 10px 15px 15px #d7d7d7;
+      padding: 15px 20px;
+      border: none;
+      color: #fff;
+      font-size: 1.05rem;
+      text-decoration: none;
+      letter-spacing: 1px;
+      cursor: pointer;
+      height: 20px;
+      display: inline-block; }
+      .dashboard_col-1 a i {
+        margin: 0 0 0 10px; }
+  .dashboard_col-2 {
+    width: 47%; }
+    .dashboard_col-2_row {
+      background-color: #fff;
+      box-shadow: 10px 15px 15px #d7d7d7;
+      max-width: 100%;
+      padding: 20px 40px;
+      border-radius: 3px; }
+      .dashboard_col-2_row .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #000;
+        padding: 0 0 15px 0;
+        margin: 0 0 20px 0; }
+        .dashboard_col-2_row .head h2 {
+          font-size: 1.35rem;
+          letter-spacing: 1px;
+          line-height: 1;
+          margin: 0; }
+        .dashboard_col-2_row .head ul {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          padding: 0; }
+          .dashboard_col-2_row .head ul li {
+            padding: 0 10px; }
+            .dashboard_col-2_row .head ul li a {
+              text-decoration: none;
+              color: #000; }
+        .dashboard_col-2_row .head i {
+          font-size: 1.35rem; }
+        .dashboard_col-2_row .head.first {
+          justify-content: flex-end; }
+          .dashboard_col-2_row .head.first h2 {
+            margin-right: auto; }
+          .dashboard_col-2_row .head.first i {
+            margin: 0 0 0 10px; }
+      .dashboard_col-2_row canvas {
+        max-height: 32.5vh; }
+      .dashboard_col-2_row .canvasPlatzhalter {
+        width: 100%;
+        height: 400px;
+        background-color: red;
+        display: none; }
+      .dashboard_col-2_row:not(:last-child) {
+        margin: 0 0 40px 0; }
+
+/* ==========================================================================
+  POPUP TAXES STYLING
+========================================================================== */
+.popup-taxes {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden; }
+  .popup-taxes:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup-taxes .popup {
+    width: 40%;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 780px; }
+    .popup-taxes .popup .popup-close:link, .popup-taxes .popup .popup-close:visited {
+      color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 1rem;
+      right: 2.5rem;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 3rem;
+      transition: all .2s; }
+
+/* ==========================================================================
+  FOOTER STYLING
+========================================================================== */
+footer {
+  height: 5vh;
+  width: 85%;
+  margin: 0 auto; }
+  footer ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    footer ul li {
+      font-size: 1.05rem; }
+      footer ul li:first-child {
+        margin: 0 20px 0 0; }
+      footer ul li a {
+        text-decoration: none;
+        color: black; }
