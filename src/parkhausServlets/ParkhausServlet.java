@@ -1,6 +1,6 @@
 
 
-// Erstellt von Emre (etuerk2s), Parkhaus Servlet
+//Erstellt von Emre (etuerk2s)
 
 package parkhausServlets;
 
