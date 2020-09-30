@@ -7,7 +7,7 @@
 ## Kanban Board:
 ![Kanban Board (vorläufig)](https://github.com/c-odenk/DigitalesParkhaus/raw/master/images/Board.jpg "Kanban Board")
 
-## [Minimum Viable Product](https://docs.google.com/spreadsheets/d/1l-hro8WgGxY7TgWKq008jI-kHufgTGFXG96Z2S5IqQs "MVP)
+## [Minimum Viable Product](https://docs.google.com/spreadsheets/d/1l-hro8WgGxY7TgWKq008jI-kHufgTGFXG96Z2S5IqQs "MVP")
 
 ## UML Use Case Diagram... WIP
 
