@@ -13,7 +13,7 @@ import parkhausInterfaces.EinweiserIF;
 import parkhausKlassen.Auto;
 import parkhausKlassen.Einweiser;
 
-class EinweiserTest 
+class EinweiserIFTest 
 {
 	EinweiserIF e;
 	Auto car, car2, car3;
