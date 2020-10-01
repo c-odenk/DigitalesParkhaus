@@ -30,6 +30,7 @@ import parkhausKlassen.SumView;
 public class ParkhausServlet extends HttpServlet 
 {
 	private static final long serialVersionUID = 1L;
+	private static int count = 0;
 	
 	private Berechnung calc = new Berechnung();
 	private Einweiser guide = new Einweiser();
@@ -79,6 +80,11 @@ public class ParkhausServlet extends HttpServlet
 						System.err.println("Nulldivision!");
 					}
 					break;
+				case "count":
+					response.setContentType("test/html");
+					out.println(count + " eingefahren");
+					System.out.println(count + " eingefahren");
+					break;
 				default:
 					System.out.println("Invalid command: " + args[0]);
 			}
@@ -107,6 +113,7 @@ public class ParkhausServlet extends HttpServlet
 			{
 				System.out.println("Einfahrt in Platz: " + id);
 				response.getWriter().println(id);
+				count++;
 			}
 		}
 		
