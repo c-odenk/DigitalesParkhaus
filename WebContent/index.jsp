@@ -12,7 +12,7 @@
 	<h1>WebParkhaus</h1>
 	<ccm-parkhaus-9-1-8
 		name="WebParkhaus"
-		Max=10
+		Max=15
 		server_url="http://localhost:8080/DigitalesParkhaus/Parkhaus"
 		extra_buttons='["sum", "avg", "count"]'
 		client_categories='["Kunde","Familie","Mitarbeiter"]'

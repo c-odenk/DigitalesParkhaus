@@ -20,7 +20,7 @@ class EinweiserTest
 	int in;
 
 	@BeforeEach
-	void setUe() throws Exception 
+	void setUp() throws Exception 
 	{
 		e = new Einweiser();
 		car = new Auto(5, "55a5297432f8a6c7949cbfd7c0cf3531");

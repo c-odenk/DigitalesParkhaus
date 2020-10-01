@@ -117,13 +117,13 @@ public class ParkhausServlet extends HttpServlet
 			}
 		}
 		
-		if(params[0].equals("leave") && !(params[4].equals("_"))) //4tes Element sind die Kosten
+		if(params[0].equals("leave")) //4tes Element sind die Kosten
 		{
 			int platz = Integer.parseInt(params[7]);
 			String ticket = params[5]; 
 			
 			System.out.println("Ausfahrt vom Platz: " + platz);
-			Auto out = guide.leave(new Auto(platz, ticket));
+			guide.leave(new Auto(platz, ticket));
 			
 			if(!params[8].equals("Mitarbeiter"))        //Mitarbeiter sollen nicht in die Berechnung einfliessen
 			{
