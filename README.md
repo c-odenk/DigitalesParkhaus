@@ -8,11 +8,11 @@
 
 ## [Minimum Viable Product](https://docs.google.com/spreadsheets/d/1JZEjMvAQffLY5O3Ah9xGBvupNgs64IdHzFDhoZhPXUs "MVP")
 
-## UML Use Case Diagram... WIP
+## [UML Use Case Diagram](https://drive.google.com/file/d/1gb4MqTr6aJeMQMYSijvwuWCosdhVvpGh/view "Use Case Diagram")
 
-## Robustheitsdiagramm... WIP
+## [Robustheitsdiagramm](https://drive.google.com/file/d/1pZhMqLIQUqxRA5wok_3oGT31l0NtQU2s/view "Robustheitsdiagramm")
 
-## [UML Klassendiagramm](https://drive.google.com/file/d/1mZw8Lz8n5LgHrMgF3aWRJj06rKg3Zv_5/view "Class Diagram")
+## [UML Klassendiagramm](https://drive.google.com/file/d/1bgU_beDHC88JW5cRhXlMnjCpT2-RI29c/view "Class Diagram")
 
 ## UML Sequenzdiagramm... WIP
 

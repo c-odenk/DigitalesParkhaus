@@ -1,4 +1,7 @@
+Erstellt von Emre (etuerk2s)
+
 @startuml
+frame "cd Parkhaussystem" {
 abstract class View [[java:parkhausKlassen.View]] {
 	+void subscribe(Berechnung m)
 	+{abstract}void update()
@@ -168,5 +171,5 @@ class SumView [[java:parkhausKlassen.SumView]] {
 
 class AvgView [[java:parkhausKlassen.AvgView]] {
 }
-
+}
 @enduml

@@ -1,0 +1,44 @@
+Erstellt von Emre (etuerk2s)
+
+@startuml
+frame "rd Parkhaussystem" {
+	actor Kunde as K
+	actor Manager as M
+	
+	rectangle Parkhaus {
+		boundary EinfahrtMaske as EM
+		boundary AusfahrtMaske as AM
+		control EinweiserCtrl as EC
+		control BezahlungCtrl as BC
+		entity Einweiser as E
+		entity Bezahlung as B
+		
+		EC .> E : <<use>>
+		EM <.d. EC : <<weise ein>>
+		AM <.d. EC : <<fahre raus>>
+		AM <. BC : <<use>>
+		BC .> B : <<berechne>>
+		}
+		
+	rectangle Dashboard {
+		boundary StatMaske as SM
+		boundary AenderungsMaske as CM
+		control AenderungCtrl as CC
+		control StatCtrl as SC
+		entity Aenderung as C
+		entity Stats as S
+		
+		SM <. SC : <<use>>
+		SC .> S : <<zeige an>>
+		
+		CM <.d. CC : <<use>>
+		CC .l.> C : <<aendere>>		
+	}
+		
+	K --> EM
+	K --> AM
+	
+	M --> SM
+	M --> CM
+}
+@enduml
