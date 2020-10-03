@@ -1,6 +1,6 @@
-Erstellt von Emre (etuerk2s)
 
 @startuml
+folder "Erstellt von Emre Türker (etuerk2s)" {
 frame "ucd Parkhaussystem" {
 	actor :Kunde: as K
 	actor :Familie: as F
@@ -32,8 +32,6 @@ frame "ucd Parkhaussystem" {
 		KG .u. N1 : <<extend>>
 		N1 .u.> GB : <<extend>>
 		
-		
-		
 	}
 	
 	rectangle Dashboard {
@@ -51,6 +49,7 @@ frame "ucd Parkhaussystem" {
 	MG -d-> SA
 	MG -d-> AP
 	MG -d-> EA
+}
 }
 
 @enduml

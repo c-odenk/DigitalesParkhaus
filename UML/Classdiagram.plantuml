@@ -1,6 +1,6 @@
-Erstellt von Emre (etuerk2s)
 
 @startuml
+folder "Erstellt von Emre Türker (etuerk2s)" {
 frame "cd Parkhaussystem" {
 abstract class View [[java:parkhausKlassen.View]] {
 	+void subscribe(Berechnung m)
@@ -170,6 +170,7 @@ class SumView [[java:parkhausKlassen.SumView]] {
 }
 
 class AvgView [[java:parkhausKlassen.AvgView]] {
+}
 }
 }
 @enduml
