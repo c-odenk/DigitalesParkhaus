@@ -14,11 +14,9 @@
 
 ## [UML Klassendiagramm](https://drive.google.com/file/d/1bgU_beDHC88JW5cRhXlMnjCpT2-RI29c/view "Class Diagram")
 
-## UML Sequenzdiagramm... WIP
+## [UML Sequenzdiagramm](https://drive.google.com/file/d/1AfAbO0TZBI5dDG3IvV8rFiX7l4T_a-PH "Sequenzdiagramm)
 
-## UML Aktivitätsdiagramm... WIP
-
-## UML Deployment Diagram... WIP
+## [UML Aktivitätsdiagramm](https://drive.google.com/file/d/1jOPUD75gwiIsIGWV5hl8loKH_YpWlIwr "Aktivitätsdiagramm")
 
 ## Eingesetzte Patterns... WIP
 
