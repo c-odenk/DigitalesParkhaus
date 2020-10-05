@@ -18,6 +18,12 @@
 
 ## [UML Aktivitätsdiagramm](https://drive.google.com/file/d/1jOPUD75gwiIsIGWV5hl8loKH_YpWlIwr "Aktivitätsdiagramm")
 
+## [Java Interfaces](https://github.com/c-odenk/DigitalesParkhaus/tree/master/src/parkhausInterfaces "Interfaces")
+
+## [JUnit Tests](https://github.com/c-odenk/DigitalesParkhaus/tree/master/src/parkhausTests "Tests")
+
+## [Java Klassen](https://github.com/c-odenk/DigitalesParkhaus/tree/master/src/parkhausKlassen "Klassen")
+
 ## Eingesetzte Patterns... WIP
 
 ## Zielkonflikte... WIP
