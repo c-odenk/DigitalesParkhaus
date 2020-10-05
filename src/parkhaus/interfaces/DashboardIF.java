@@ -2,20 +2,20 @@
 
 //Erstellt von Christopher (codenk2s): Dashboard Interface
 
-package parkhausInterfaces;
+package parkhaus.interfaces;
 
 public interface DashboardIF {
 	
 	// ###### SET METHODEN
 	
-	public void setPreisKunde(float preis);
-	public void setPreisMitarbeiter(float preis);
-	public void seitZeit();
+	public static void setPreisKunde(float preis) {}
+	public static void setPreisMitarbeiter(float preis) {}
+	public static void seitZeit() {}
 		
 	// ###### GET METHODEN
 	
 	public float getPreisKunde();
 	public float getPreisMitarbeiter();
-	public void getParkplatzFrei();
+	public int getParkplatzFrei();
 
 }

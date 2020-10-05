@@ -87,6 +87,55 @@ header {
       line-height: 1.7;
       margin: 0;
       padding: 0; }
+    .landing-content_col-1_form-box {
+      width: 80%;
+      margin: 20vh 0; }
+      .landing-content_col-1_form-box form {
+        width: 100%; }
+        .landing-content_col-1_form-box form .head {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          padding: 0 0 15px 0; }
+          .landing-content_col-1_form-box form .head h2 {
+            font-size: 1.35rem;
+            letter-spacing: 1px;
+            line-height: 1;
+            margin: 0; }
+          .landing-content_col-1_form-box form .head i {
+            font-size: 1.35rem; }
+          .landing-content_col-1_form-box form .head:first-of-type {
+            margin: 0 0 25px 0; }
+          .landing-content_col-1_form-box form .head:not(:first-of-type) {
+            margin: 60px 0 25px 0; }
+        .landing-content_col-1_form-box form label {
+          display: inline-block;
+          font-size: 1.2rem;
+          width: 32%; }
+        .landing-content_col-1_form-box form input {
+          background-color: transparent;
+          padding: 7.5px 5px;
+          border: none;
+          border-bottom: 0.5px solid #202020 !important;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          text-align: left;
+          width: 15%; }
+          .landing-content_col-1_form-box form input.send {
+            display: inline-block;
+            background-color: #3559c7;
+            padding: 13px 0;
+            margin: 50px 0 0 auto;
+            border: none;
+            color: #fff;
+            font-size: 1.05rem;
+            cursor: pointer;
+            width: 250px;
+            text-align: center; }
+        .landing-content_col-1_form-box form input::-webkit-inner-spin-button {
+          margin-left: 10px; }
     .landing-content_col-1-control-box .simulation {
       display: flex;
       flex-direction: row;
@@ -106,52 +155,6 @@ header {
         cursor: pointer; }
   .landing-content_col-2 {
     width: 45%; }
-    .landing-content_col-2 .parkhaus {
-      width: 100%; }
-      .landing-content_col-2 .parkhaus h1 {
-        letter-spacing: 1px;
-        font-weight: 500;
-        font-size: 1.7rem;
-        text-transform: uppercase;
-        margin: 0 0 30px 0; }
-      .landing-content_col-2 .parkhaus .parkplaetze {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px 33px;
-        margin: 0 0 100px 0; }
-        .landing-content_col-2 .parkhaus .parkplaetze .parkplatz {
-          width: 135px;
-          height: 65px; }
-          .landing-content_col-2 .parkhaus .parkplaetze .parkplatz.frei {
-            background: #DCDCDC; }
-          .landing-content_col-2 .parkhaus .parkplaetze .parkplatz.belegt {
-            background: #3c5fc9; }
-    .landing-content_col-2 .status-box {
-      width: 100%; }
-      .landing-content_col-2 .status-box h1 {
-        letter-spacing: 1px;
-        font-weight: 500;
-        font-size: 1.7rem;
-        text-transform: uppercase;
-        margin: 0 0 30px 0; }
-      .landing-content_col-2 .status-box table {
-        width: 100%;
-        font-size: 1.05rem; }
-        .landing-content_col-2 .status-box table tr {
-          padding: 0;
-          margin: 0; }
-          .landing-content_col-2 .status-box table tr th {
-            font-size: bold;
-            padding: 12px;
-            background-color: #DCDCDC;
-            text-align: left; }
-          .landing-content_col-2 .status-box table tr td {
-            padding: 12px;
-            margin: 0;
-            border: none; }
-          .landing-content_col-2 .status-box table tr:nth-child(even) {
-            background-color: #DCDCDC; }
 
 /* ==========================================================================
   DASHBOARD STYLING
@@ -164,17 +167,15 @@ header {
   flex-direction: row;
   justify-content: space-between; }
   .dashboard_col-1 {
-    width: 47.5%;
+    width: 46%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
     .dashboard_col-1_rowBig {
-      background-color: #fff;
-      box-shadow: 10px 15px 15px #d7d7d7;
       border-radius: 3px;
       width: 100%;
-      padding: 30px 40px 30px 40px;
+      padding: 20px 40px 30px 0px;
       margin: 0 0 40px 0; }
       .dashboard_col-1_rowBig .head {
         display: flex;
@@ -219,63 +220,56 @@ header {
           padding: 5px 0; }
           .dashboard_col-1_rowBig form div label {
             width: 280px; }
-    .dashboard_col-1_rowSmall {
-      background-color: #fff;
-      box-shadow: 10px 15px 15px #d7d7d7;
-      border-radius: 3px;
-      width: 25%;
-      height: 150px;
-      position: relative;
-      padding: 30px 40px 30px 40px;
-      margin: 0 0px 40px 0; }
-      .dashboard_col-1_rowSmall .head {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #000;
-        padding: 0 0 15px 0; }
-        .dashboard_col-1_rowSmall .head h2 {
-          font-size: 1.35rem;
-          letter-spacing: 1px;
-          line-height: 1;
-          margin: 0; }
-        .dashboard_col-1_rowSmall .head i {
-          font-size: 1.35rem; }
-      .dashboard_col-1_rowSmall p {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-55%, 0);
-        font-size: 1.35rem;
-        letter-spacing: 1px;
-        line-height: 1;
-        margin: 0; }
-      .dashboard_col-1_rowSmall:last-of-type {
-        margin: 0 0px 40px 30px; }
-    .dashboard_col-1 a {
-      background: rgba(160, 0, 0, 0.85);
-      box-shadow: 10px 15px 15px #d7d7d7;
-      padding: 15px 20px;
-      border: none;
-      color: #fff;
-      font-size: 1.05rem;
-      text-decoration: none;
-      letter-spacing: 1px;
-      cursor: pointer;
-      height: 20px;
-      display: inline-block; }
-      .dashboard_col-1 a i {
-        margin: 0 0 0 10px; }
+      .dashboard_col-1_rowBig .parkhaus {
+        width: 100%; }
+        .dashboard_col-1_rowBig .parkhaus ul {
+          list-style: none;
+          margin: 20px 0 30px 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 10px 65px; }
+          .dashboard_col-1_rowBig .parkhaus ul .parkplatz {
+            width: 135px;
+            height: 65px; }
+            .dashboard_col-1_rowBig .parkhaus ul .parkplatz.frei {
+              background: #DCDCDC; }
+            .dashboard_col-1_rowBig .parkhaus ul .parkplatz.belegt {
+              background: #3c5fc9; }
+      .dashboard_col-1_rowBig .status-tabelle {
+        width: 100%; }
+        .dashboard_col-1_rowBig .status-tabelle table {
+          width: 100%;
+          font-size: 1.05rem;
+          margin: 50px 0 0px 0; }
+          .dashboard_col-1_rowBig .status-tabelle table tr {
+            padding: 0;
+            margin: 0; }
+            .dashboard_col-1_rowBig .status-tabelle table tr th {
+              font-size: bold;
+              padding: 12px;
+              background-color: #DCDCDC;
+              text-align: left; }
+            .dashboard_col-1_rowBig .status-tabelle table tr td {
+              padding: 12px;
+              margin: 0;
+              border: none; }
+            .dashboard_col-1_rowBig .status-tabelle table tr:nth-child(even) {
+              background-color: #DCDCDC; }
   .dashboard_col-2 {
-    width: 47%; }
-    .dashboard_col-2_row {
+    width: 47%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .dashboard_col-2_rowBig {
       background-color: #fff;
-      box-shadow: 10px 15px 15px #d7d7d7;
       max-width: 100%;
-      padding: 20px 40px;
-      border-radius: 3px; }
-      .dashboard_col-2_row .head {
+      padding: 20px 40px 0px 40px;
+      border-radius: 3px;
+      margin: 0; }
+      .dashboard_col-2_rowBig .head {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -283,39 +277,92 @@ header {
         border-bottom: 1px solid #000;
         padding: 0 0 15px 0;
         margin: 0 0 20px 0; }
-        .dashboard_col-2_row .head h2 {
+        .dashboard_col-2_rowBig .head h2 {
           font-size: 1.35rem;
           letter-spacing: 1px;
           line-height: 1;
           margin: 0; }
-        .dashboard_col-2_row .head ul {
+        .dashboard_col-2_rowBig .head ul {
           list-style: none;
           display: flex;
           flex-direction: row;
           margin: 0;
           padding: 0; }
-          .dashboard_col-2_row .head ul li {
+          .dashboard_col-2_rowBig .head ul li {
             padding: 0 10px; }
-            .dashboard_col-2_row .head ul li a {
+            .dashboard_col-2_rowBig .head ul li a {
               text-decoration: none;
               color: #000; }
-        .dashboard_col-2_row .head i {
+        .dashboard_col-2_rowBig .head i {
           font-size: 1.35rem; }
-        .dashboard_col-2_row .head.first {
+        .dashboard_col-2_rowBig .head.first {
           justify-content: flex-end; }
-          .dashboard_col-2_row .head.first h2 {
+          .dashboard_col-2_rowBig .head.first h2 {
             margin-right: auto; }
-          .dashboard_col-2_row .head.first i {
+          .dashboard_col-2_rowBig .head.first i {
             margin: 0 0 0 10px; }
-      .dashboard_col-2_row canvas {
-        max-height: 32.5vh; }
-      .dashboard_col-2_row .canvasPlatzhalter {
+      .dashboard_col-2_rowBig canvas {
+        max-height: 32.5vh;
+        margin: 0; }
+      .dashboard_col-2_rowBig:nth-of-type(1) {
         width: 100%;
-        height: 400px;
-        background-color: red;
-        display: none; }
-      .dashboard_col-2_row:not(:last-child) {
-        margin: 0 0 40px 0; }
+        margin: 0 0 40px 0;
+        box-shadow: 10px 15px 15px #d7d7d7; }
+      .dashboard_col-2_rowBig:nth-of-type(2) {
+        width: 61%;
+        box-shadow: 10px 15px 15px #d7d7d7; }
+      .dashboard_col-2_rowBig:nth-of-type(3) {
+        width: 28%;
+        padding: 0;
+        margin: 0;
+        background-color: transparent; }
+      .dashboard_col-2_rowBig .rowBox {
+        margin: 0;
+        background-color: #fff; }
+        .dashboard_col-2_rowBig .rowBox .head {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          padding: 0 0 15px 0;
+          margin: 0 0 20px 0; }
+          .dashboard_col-2_rowBig .rowBox .head h2 {
+            font-size: 1.35rem;
+            letter-spacing: 1px;
+            line-height: 1;
+            margin: 0; }
+          .dashboard_col-2_rowBig .rowBox .head i {
+            font-size: 1.35rem; }
+        .dashboard_col-2_rowBig .rowBox p {
+          font-size: 1.35rem;
+          letter-spacing: 1px;
+          text-align: center;
+          font-weight: 500;
+          padding: 0;
+          margin: 40px 0 20px 0; }
+        .dashboard_col-2_rowBig .rowBox a {
+          margin: 0;
+          width: auto;
+          background: rgba(160, 0, 0, 0.85);
+          box-shadow: 10px 15px 15px #d7d7d7;
+          padding: 15px 20px;
+          border: none;
+          color: #fff;
+          font-size: 1.05rem;
+          text-decoration: none;
+          letter-spacing: 1px;
+          cursor: pointer;
+          height: 20px;
+          display: inline-block; }
+          .dashboard_col-2_rowBig .rowBox a i {
+            margin: 0 0 0 10px; }
+        .dashboard_col-2_rowBig .rowBox:nth-of-type(1), .dashboard_col-2_rowBig .rowBox:nth-of-type(2) {
+          margin: 0 0 40px 0;
+          box-shadow: 10px 15px 15px #d7d7d7;
+          padding: 20px; }
+        .dashboard_col-2_rowBig .rowBox:nth-of-type(3) {
+          background-color: transparent; }
 
 /* ==========================================================================
   POPUP TAXES STYLING
