@@ -1,7 +1,11 @@
-package parkhaus.interfaces;
+
+//Erstellt von Emre (etuerk2s)
+
+package parkhausInterfaces;
 
 import java.util.List;
-import parkhaus.model.Auto;
+
+import parkhausKlassen.Auto;
 
 public interface EinweiserIF
 {
@@ -17,6 +21,4 @@ public interface EinweiserIF
 	public int getSize();
 	
 	public int getMax();
-	
-	public void setMax(int m);
 }

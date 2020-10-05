@@ -1,0 +1,19 @@
+Erstellt von Emre Türker (etuerk2s)
+
+@startuml
+(*) -r-> "Kunde kommt"
+-r-> "Ticket ziehen"
+-r-> "Ins Parkhaus einfahren"
+-d-> "Kunde in Parkplatz einweisen"
+-l-> "Gebühr berechnen"
+if "Ist Kunde Mitarbeiter" then
+	-> [Ja] "keine Bezahlung"
+	--> "Parkhaus verlassen"
+else
+	--> [Nein] "Gebühr bezahlen"
+	-> "Gebühr einnehmen"
+endif
+-d-> "Kunden ausfahren"
+-d-> "Parkhaus verlassen"
+"Parkhaus verlassen" --> (*)
+@enduml

@@ -1,4 +1,7 @@
-package parkhaus.interfaces;
+
+//Erstellt von Emre (etuerk2s)
+
+package parkhausInterfaces;
 
 public interface AutoIF 
 {

@@ -1,0 +1,55 @@
+
+@startuml
+folder "Erstellt von Emre Türker (etuerk2s)" {
+frame "ucd Parkhaussystem" {
+	actor :Kunde: as K
+	actor :Familie: as F
+	actor :Mitarbeiter: as M
+	actor :Einweiser: as E
+	actor :Manager: as MG
+	
+	K <|-r- F
+	K <|-l- M
+	
+	rectangle Parkhaus {
+		usecase "Ins Parkhaus einfahren" as PE
+		usecase "Ticket ziehen" as T
+		
+		usecase GB as "Geld bezahlen
+		--
+		extension points
+		Mitarbeiter"
+		
+		note "Condition: Kunde ist Mitarbeiter\nExtension Point: Mitarbeiter" as N1
+		
+		usecase "kein Geld bezahlen" as KG
+		usecase "Parkhaus verlassen" as PV
+		usecase "Kosten berechnen" as KB
+		
+		PV .d.> GB : <<include>>
+		PE .l.> T : <<include>>
+		PE .d.> KB : <<include>>
+		KG .u. N1 : <<extend>>
+		N1 .u.> GB : <<extend>>
+		
+	}
+	
+	rectangle Dashboard {
+		usecase "Statistiken anzeigen" as SA
+		usecase "Einnahmen anzeigen" as EA
+		usecase "Änderungen am Parkhaus vornehmen" as AP
+		}
+	
+	K -d-> PE
+	K -d-> PV
+	
+	PE -d-> E
+	PV -d-> E
+	
+	MG -d-> SA
+	MG -d-> AP
+	MG -d-> EA
+}
+}
+
+@enduml

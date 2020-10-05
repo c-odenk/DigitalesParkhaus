@@ -1,0 +1,33 @@
+Erstellt von Emre Türker (etuerk2s)
+
+@startuml
+
+actor "K:Kunde" as K
+boundary EinfahrtMaske as EM
+control EinweiserCtrl as EC
+entity Einweiser as E
+boundary AusfahrtMaske as AM
+control BezahlungCtrl as BC
+entity Bezahlung as B
+
+K -> EM: Ticket ziehen
+EM -> EC: Daten übergeben
+EC -> E: new
+E -> EC: einfahren
+EC-> EM: Parkplatz geben
+EM -> K: eingefahren
+K-> AM: ausfahren
+AM -> BC: Daten übergeben
+AM -> EC: Daten übergeben
+EC -> E: Kunden entfernen
+E -> EC: entfernt
+BC -> B: new
+B -> BC: Gebühr berechnen
+alt Kunde ist Mitarbeiter
+	BC -> AM: keine Gebühr
+else kein Mitarbeiter
+	BC -> AM: Gebühr einnehmen
+end
+AM -> K: ausgefahren
+
+@enduml
