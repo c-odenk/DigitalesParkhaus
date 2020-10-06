@@ -1,52 +1,53 @@
+
+
+//Erstellt von Emre (etuerk2s)
+
 package parkhaus.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 import parkhaus.interfaces.EinweiserIF;
 
 public class Einweiser implements EinweiserIF
 {
-	private int max = 10;
+	private int max = 15;
 	private List<Auto> cars = new ArrayList<>();
-	
-	// ###### Von Christopher (codenk2s)
-	
-	private float preisKunde;
-	private float preisMitarbeiter;
+	private int[] platzBelegt = new int[max];
 	
 	public Einweiser()
 	{
+		for(int i = 0; i < max; i++) // Markiere Parkplätze am Anfang als frei (0)
+			platzBelegt[i] = 0;
 	}
 
 	public int enter(Auto in) 
 	{
 		int slot = 0;
-		
-		if(getSize() > getMax()) // Parkhaus voll
+		if(Arrays.stream(platzBelegt).allMatch(platz -> platz != 0)) // Parkhaus voll
 		{
 			return slot;
 		}
 		
-		for(int i = 0;i < getMax()*2; i++) //Generiere solange eine zufällige Zahl bis ein freier Parkplatz gefunden wird
+		for(int i = 0; i < max; i++)
 		{
-			int rand = (new Random()).nextInt(getMax() - 1 + 1) + 1;
-			if(getCars().stream().map(car -> car.getParkplatz()).noneMatch(platz -> platz == rand))
+			if(platzBelegt[i] == 0)
 			{
-				slot = rand;
+				slot = i + 1;
+				platzBelegt[i] = slot;
 				in.setParkplatz(slot);
 				addCar(in);
 				break;
 			}
 		}
-		
 		return slot;
 	}
 
 	public Auto leave(Auto out) 
 	{
-		Auto tmp = getCars().stream().filter(car -> car.getTicket().equals(out.getTicket())).findFirst().get(); // Finde Auto im Parkhaus mit dem richtigen Ticket
+		Auto tmp = getCars().stream().filter(car -> car.getParkplatz() == out.getParkplatz()).findFirst().get(); // Finde Auto im Parkhaus mit dem richtigen Parkplatz
+		platzBelegt[tmp.getParkplatz() - 1] = 0; // Markiere Platz wieder als frei
 		
 		if(!cars.remove(tmp))
 		{
@@ -73,28 +74,6 @@ public class Einweiser implements EinweiserIF
 	public int getMax()
 	{
 		return max;
-	}
-	
-	public void setMax(int m)
-	{
-		max = m;
-	}
-	
-	
-	// ###### Von Christopher (codenk2s)
-	
-	public void setPreisKunde(float preis) {
-		// Parkgebühren für Kunden festlegen
-		// Wird genutzt von Klasse Dashboard um Preise festzulegen
-		
-		preisKunde = preis;	
-	}
-
-	public void setPreisMitarbeiter(float preis) {
-		// Parkgebühren für Mitarbeiter festlegen
-		// Wird genutzt von Klasse Dashboard um Preise festzulegen
-		
-		preisMitarbeiter = preis;
 	}
 	
 }

@@ -25,7 +25,7 @@
 <body>
 
 <!-- ################################################################################## -->
-<!-- ##########                1. REIHE: LOGO & MEN‹                         ########## -->
+<!-- ##########                1. REIHE: LOGO & MENÔøΩ                         ########## -->
 
 <header>
 	<nav>
@@ -44,7 +44,7 @@
 	<div class="landing-content_col-1">
 		<div class="landing-content_col-1_info-box">
 			<p> Parkhaus von Projektgruppe #32. Es ist der <b> <%= new java.util.Date()  %> </b>. <%= Datum.test() %> </p>
-	    	<p> Geˆffnet von <b> xx Uhr </b> bis <b> YY Uhr</b>. Aktuell sind noch <b> 11 </b> von <b> 30 </b> Parkpl‰tzen frei. </p>
+	    	<p> Ge√∂ffnet von <b> xx Uhr </b> bis <b> YY Uhr </b>. Aktuell sind noch <b> 11 </b> von <b> 30 </b> Parkpl√§tzen frei. </p>
 		</div>
 	</div>
 	
@@ -53,19 +53,19 @@
 			<!-- <form action="dashboard.jsp" method="post"> -->
 			<form action="ParkhausServlet" method="post">
 				<div class="head">
-					<h2> ÷ffnungszeiten einstellen: </h2>
+					<h2> √ñffnungszeiten einstellen: </h2>
 					<i class="fas fa-cog"></i>
 				</div>
-				<label> ÷ffnungszeiten von: </label>
+				<label> √ñffnungszeiten von: </label>
 				<input type="number" name="inputOpen" placeholder="" value="6">
-				<label> ÷ffnungszeiten bis: </label>
+				<label> √ñffnungszeiten bis: </label>
 				<input type="number" name="inputClose" placeholder="" value="24">
 				
 				<div class="head">
-					<h2> Anzahl Parkpl‰tze einstellen: </h2>
+					<h2> Anzahl Parkpl√§tze einstellen: </h2>
 					<i class="fas fa-cog"></i>
 				</div>
-				<label> Parkpl‰tze max: </label>
+				<label> Parkpl√§tze max: </label>
 				<input type="number" name="inputParkMax" value="20">
 				
 				<div class="head">

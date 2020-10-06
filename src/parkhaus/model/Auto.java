@@ -1,5 +1,7 @@
 package parkhaus.model;
 import parkhaus.interfaces.AutoIF;
+import parkhaus.interfaces.String;
+
 
 public class Auto implements AutoIF
 {
