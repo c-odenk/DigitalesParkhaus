@@ -3,8 +3,9 @@
 // Erstellt von Christopher (codenk2s): Finanzen zum errechnen der Umsätze und übermittlung ans Finanzamt
 
 package parkhaus.model;
+import parkhaus.interfaces.FinanzenIF;
 
-public class Finanzen {
+public class Finanzen implements FinanzenIF {
 	
 	// #### VARIABLEN
 	
@@ -15,7 +16,19 @@ public class Finanzen {
 	
 	// ###### KONSTRUKTOR
 	
+	
+	
 	// ###### SET METHODEN
+
+	public void setPreisKunde() {
+		// Nimmt den Preis von Servlet an. Servlet erhält den Preis von index.jsp
+		
+	}
+
+	public void setPreisMitarbeiter() {
+		// Nimmt den Preis von Servlet an. Servlet erhält den Preis von index.jsp		
+	}
+	
 	
 	// ###### GET METHODEN
 	
@@ -34,6 +47,9 @@ public class Finanzen {
 	
 	public double getUst() {
 		// Nimmt einen Umsatz an und errechnet die Umsatzsteuer
+		
+		return 1.19;
 	}
+
 
 }

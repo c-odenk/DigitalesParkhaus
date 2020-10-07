@@ -8,8 +8,8 @@ public interface FinanzenIF {
 	
 	// ###### SET METHODEN
 	
-	// public void setPreisKunde(double preis);
-	// public void setPreisMitarbeiter(double preis);
+	public void setPreisKunde();
+	public void setPreisMitarbeiter();
 	
 	// ###### GET METHODEN
 	

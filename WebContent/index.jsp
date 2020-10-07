@@ -1,12 +1,9 @@
 
-<<<<<<< HEAD
-
 <!-- Erstellt von Christopher (codenk2s): Index JSP -->
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1"%>
 <%@ page import="parkhaus.controller.*" %>
 <%@ page import="parkhaus.model.*" %>
-
 
 <!DOCTYPE html>
 <html>
@@ -21,8 +18,21 @@
 	
 	<!-- FONT AWESOME -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	
+	
 </head>
 <body>
+
+	<ccm-parkhaus-9-1-8
+		name="WebParkhaus"
+		Max=15
+		server_url="http://localhost:8080/DigitalesParkhaus/Parkhaus"
+		extra_buttons='["sum", "avg", "count"]'
+		client_categories='["Kunde","Familie","Mitarbeiter"]'
+		price_factor='{"Kunde":1,"Familie":2,"Mitarbeiter":0}'
+		>
+	</ccm-parkhaus-9-1-8>
+		
 
 <!-- ################################################################################## -->
 <!-- ##########                1. REIHE: LOGO & MEN�                         ########## -->
@@ -31,8 +41,8 @@
 	<nav>
 		<h1><a href="#"><span class="big">Parkhaus</span><span class="small">#32</span></a></h1>
 		<ul>
-			<li><a href="#"> Home </a></li>
-			<li><a href="#"> Dashboard </a></li>
+			<li><a href=""> Home </a></li>
+			<li><a href=""> Dashboard </a></li>
 		</ul>
 	</nav>
 </header>
@@ -43,8 +53,8 @@
 <section class="landing-content">
 	<div class="landing-content_col-1">
 		<div class="landing-content_col-1_info-box">
-			<p> Parkhaus von Projektgruppe #32. Es ist der <b> <%= new java.util.Date()  %> </b>. <%= Datum.test() %> </p>
-	    	<p> Geöffnet von <b> xx Uhr </b> bis <b> YY Uhr </b>. Aktuell sind noch <b> 11 </b> von <b> 30 </b> Parkplätzen frei. </p>
+			<p> Parkhaus von Projektgruppe #32. Es ist der <b> <%= Datum.datumToString() %> </b> <b> <%= java.util.Calendar.getInstance().getTime() %> </b> </p>
+	    	<p> Geoeffnet von <b> 06 Uhr </b> bis <b> 24 Uhr </b>. Aktuell sind noch <b> 20 </b> von <b> 20 </b> Parkplaetzen frei. </p>
 		</div>
 	</div>
 	
@@ -53,19 +63,19 @@
 			<!-- <form action="dashboard.jsp" method="post"> -->
 			<form action="ParkhausServlet" method="post">
 				<div class="head">
-					<h2> Öffnungszeiten einstellen: </h2>
+					<h2> Oeffnungszeiten einstellen: </h2>
 					<i class="fas fa-cog"></i>
 				</div>
-				<label> Öffnungszeiten von: </label>
+				<label> Oeffnungszeiten von: </label>
 				<input type="number" name="inputOpen" placeholder="" value="6">
-				<label> Öffnungszeiten bis: </label>
+				<label> Oeffnungszeiten bis: </label>
 				<input type="number" name="inputClose" placeholder="" value="24">
 				
 				<div class="head">
-					<h2> Anzahl Parkplätze einstellen: </h2>
+					<h2> Anzahl Parkplaetze einstellen: </h2>
 					<i class="fas fa-cog"></i>
 				</div>
-				<label> Parkplätze max: </label>
+				<label> Parkplaetze max: </label>
 				<input type="number" name="inputParkMax" value="20">
 				
 				<div class="head">
@@ -96,26 +106,4 @@
 
 </body>
 </html>
-=======
-<!--Erstellt von Emre (etuerk2s)-->
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<html>
-	<head>
-		<title>WebParkhaus</title>
-		<script src="https://ccmjs.github.io/mkaul-components/parkhaus/versions/ccm.parkhaus-9.1.8.js"></script>
-	</head>
-	<body>
-	<h1>WebParkhaus</h1>
-	<ccm-parkhaus-9-1-8
-		name="WebParkhaus"
-		Max=15
-		server_url="http://localhost:8080/DigitalesParkhaus/Parkhaus"
-		extra_buttons='["sum", "avg", "count"]'
-		client_categories='["Kunde","Familie","Mitarbeiter"]'
-		price_factor='{"Kunde":1,"Familie":2,"Mitarbeiter":0}'
-		></ccm-parkhaus-9-1-8>
-	</body>
-</html>
->>>>>>> c791c83811d230e78ecac96cc8626be89a7d5cc6

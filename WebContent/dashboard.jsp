@@ -32,24 +32,11 @@
 	<nav>
 		<h1><a href="#"><span class="big">Parkhaus</span><span class="small">#32</span></a></h1>
 		<ul>
-			<li><a href="#"> Home </a></li>
-			<li><a href="#"> Dashboard </a></li>
+			<li><a href=""> Home </a></li>
+			<li><a href=""> Dashboard </a></li>
 		</ul>
 	</nav>
 </header>
-
-
-<%= request.getParameter("inputOpen") %>
-<%= request.getParameter("inputClose") %>
-<h1> <%= request.getParameter("inputParkMax") %> </h1>
-<h2> <%= request.getParameter("inputPreisMitarbeiter") %> </h2>
-
-<h1> <%= request.getParameter("inputPreisKunde") %> </h1>
-
-<p> Aktuelle Anzahl freier Parkplätze: <%= request.getParameter("inputParkMax") %> </p>
-
-
-
 
 
 <!-- ################################################################################## -->
@@ -61,7 +48,7 @@
 	
 		<div class="dashboard_col-1_rowBig">
 		  <div class="head">
-		    <h2>  Übersicht Parkplätze: </h2>
+		    <h2>  Uebersicht Parkplaetze: </h2>
 		    <i class="fas fa-info-circle"></i>
 		  </div>
 		  <div class="parkhaus">
@@ -89,7 +76,7 @@
 	
 		<div class="dashboard_col-1_rowBig">
 		  <div class="head">
-		    <h2>  Übersicht Parkhauskunden: </h2>
+		    <h2>  Uebersicht Parkhauskunden: </h2>
 		    <i class="fas fa-info-circle"></i>
 		  </div>
 		  <div class="status-tabelle">
@@ -220,7 +207,7 @@
 		       <h2> Parkdauer max: </h2>
 		       <i class="fas fa-info-circle"></i>
 		     </div>
-		     <p> 115min </p>
+		     <p> <%= java.util.Calendar.getInstance().getTime() %> </p>
 		  </div>
 		  <div class="rowBox">
 		     <a href="#popup-taxes"> Steuerabgabe ermitteln <i class="fas fa-file-upload"></i></a>

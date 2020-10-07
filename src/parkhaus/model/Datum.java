@@ -23,12 +23,14 @@ public class Datum {
 	
 	// #### TEST METHODE
 	
-	public Date testDate () {
-		return datum;
-	}
-	
 	public static String test () {
 		return "test";
+	}
+	
+	// #### AUSGABEMETHODEN
+	
+	public static String zeitToString() {
+		return "DatumToString";
 	}
 	
 	public static String datumToString() {
