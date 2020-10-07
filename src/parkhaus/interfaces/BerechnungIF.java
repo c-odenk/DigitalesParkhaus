@@ -1,7 +1,7 @@
 
 //Erstellt von Emre (etuerk2s)
 
-package parkhausInterfaces;
+package parkhaus.interfaces;
 import java.util.List;
 
 public interface BerechnungIF

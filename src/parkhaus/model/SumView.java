@@ -6,7 +6,7 @@ public class SumView extends View
 {
 	float sum;
 	
-	float view()
+	public float view()
 	{
 		return sum;
 	}
