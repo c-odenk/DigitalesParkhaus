@@ -8,7 +8,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,6 +26,7 @@ public class ParkhausServlet extends HttpServlet {
 	// ###### VARIABLEN ERSTELLEN
 	private Verwalter verwalter = new Verwalter();
 	
+	
     public ParkhausServlet() {
         super();
     }
@@ -41,7 +41,6 @@ public class ParkhausServlet extends HttpServlet {
 	
 		RequestDispatcher dispatcherToView = request.getRequestDispatcher("dashboard.jsp");
 		dispatcherToView.forward(request, response);
-
     }
     
     private void processGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
@@ -49,9 +48,6 @@ public class ParkhausServlet extends HttpServlet {
     	String body = getBody(request);
 		String[] params = body.split(",");
 		System.out.println(body);
-    
-		// VERARBEITETE DATEN AN VIEW (dashboard.jsp) ZURÜCKGEBEN 
-
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
@@ -79,7 +75,7 @@ public class ParkhausServlet extends HttpServlet {
 			
 			verwalter.setChange();
 		}
-		
+	
 		processPost(request, response);
 	}
 

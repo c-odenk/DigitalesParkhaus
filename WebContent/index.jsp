@@ -42,7 +42,7 @@
 	<div class="landing-content_col-1">
 		<div class="landing-content_col-1_info-box">
 			<p> Parkhaus von Projektgruppe #32. Es ist der <b> <%= Datum.datumToString() %> </b> <b> <%= java.util.Calendar.getInstance().getTime() %> </b> </p>
-	    	<p> Geoeffnet von <b> 06 Uhr </b> bis <b> 24 Uhr </b>. Aktuell sind noch <b> 20 </b> von <b> 20 </b> Parkplaetzen frei. </p>
+	    	<p> Geoeffnet von <b> 06 Uhr </b> bis <b> 24 Uhr </b>. Aktuell sind noch <b> 15 </b> von <b> 15 </b> Parkplaetzen frei. </p>
 		</div>
 	</div>
 	
@@ -64,7 +64,7 @@
 					<i class="fas fa-cog"></i>
 				</div>
 				<label> Parkplaetze max: </label>
-				<input type="number" name="inputParkMax" value="20">
+				<input type="number" name="inputParkMax" value="15">
 				
 				<div class="head">
 					<h2> Preiskategorien einstellen: </h2>

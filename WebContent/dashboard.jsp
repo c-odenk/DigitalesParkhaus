@@ -38,7 +38,6 @@
 	</nav>
 </header>
 
-
 <!-- ################################################################################## -->
 <!-- ##########                2. REIHE: DASHBOARD ZWEISPALTIG               ########## -->
 
@@ -77,106 +76,15 @@
 		      
 		  </div>
 		</div>
-	
+		
 		<div class="dashboard_col-1_rowBig">
 		  <div class="head">
 		    <h2>  Uebersicht Parkhauskunden: </h2>
 		    <i class="fas fa-info-circle"></i>
 		  </div>
-		  <div class="status-tabelle">
-		    <table>
-		      <thead>
-		        <tr>
-		          <th> Nr </th>
-		          <th> Von </th>
-		          <th> Bis </th>
-		          <th> Dauer </th>
-		          <th> Ticket </th>
-		          <th> Preis </th>
-		        </tr>
-		      </thead>
-		      
-		      <!--  HIER MUSS EINE SCHLEIFE IMPLEMENTIERT WERDEN DIE FÜR JEDEN PARKENDEN SPÄTER EINE TABLE REIHE EINFÜGT  -->
-		      
-		      <tbody>
-		        <tr>
-		          <td> 1 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> cb9f80f5e7ec08f485e94a484e79c774 </td>
-		          <td> € 16.04 </td>
-		        </tr>
-		        <tr>
-		          <td> 2 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> d0144c422ef40c6124c3dac3166aa942 </td>
-		          <td> € 23.93 </td>
-		        </tr>
-		        <tr>
-		          <td> 3 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> 6eb3cf9141e4e7854db680673c4e461f </td>
-		          <td> € 79.68 </td>
-		        </tr>
-		        <tr>
-		          <td> 4 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> cb9f80f5e7ec08f485e94a484e79c774 </td>
-		          <td> € 16.04 </td>
-		        </tr>
-		        <tr>
-		          <td> 5 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> d0144c422ef40c6124c3dac3166aa942 </td>
-		          <td> € 23.93 </td>
-		        </tr>
-		        <tr>
-		          <td> 6 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> 6eb3cf9141e4e7854db680673c4e461f </td>
-		          <td> € 79.68 </td>
-		        </tr>
-		        <tr>
-		          <td> 7 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> cb9f80f5e7ec08f485e94a484e79c774 </td>
-		          <td> € 16.04 </td>
-		        </tr>
-		        <tr>
-		          <td> 8 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> d0144c422ef40c6124c3dac3166aa942 </td>
-		          <td> € 23.93 </td>
-		        </tr>
-		        <tr>
-		          <td> 9 </td>
-		          <td> YY </td>
-		          <td> XX </td>
-		          <td> YY </td>
-		          <td> 6eb3cf9141e4e7854db680673c4e461f </td>
-		          <td> € 79.68 </td>
-		        </tr>
-		      </tbody>
-		    </table>
-		  </div>
 		</div>
 	</div>
-
+		
 	<div class="dashboard_col-2">
 	
 		<div class="dashboard_col-2_rowBig">
@@ -217,7 +125,7 @@
 		     <p> <%= java.util.Calendar.getInstance().getTime() %> </p>
 		  </div>
 		  <div class="rowBox">
-		     <a href="#popup-taxes"> Steuerabgabe ermitteln <i class="fas fa-file-upload"></i></a>
+		     <a href="#popup-taxes"> Steuerabgabe <i class="fas fa-file-upload"></i></a>
 		  </div>
 		</div>
 	</div>
@@ -228,7 +136,7 @@
 
 <section class="popup-taxes" id="popup-taxes">
 	<div class="popup">
-		<a href="dashboard.jsp" class="popup-close"> &times; </a>
+		<a href="ParkhausServlet" class="popup-close"> &times; </a>
 		<table>
          <tr class="gray">
            <td> Parkhaus Umsatz </td>
@@ -270,6 +178,23 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 <script src="js/my-charts.js"></script>
+<br><br><br><br><br><br><br>
+<head>
+		<title>WebParkhaus</title>
+		<script src="https://ccmjs.github.io/mkaul-components/parkhaus/versions/ccm.parkhaus-9.1.8.js"></script>
+</head>
+<body>
+<ccm-parkhaus-9-1-8
+		name="WebParkhaus"
+		open_from=<%= request.getAttribute("offenVon") %>
+		open_to=<%= request.getAttribute("offenBis") %>
+		Max=<%= request.getAttribute("max") %>
+		server_url="http://localhost:8080/DigitalesParkhaus/Parkhaus"
+		extra_buttons='["Kunde", "sum", "avg", "count"]'
+		client_categories='["Kunde","Familie","Mitarbeiter"]'
+		price_factor='{"Kunde":<%= request.getAttribute("preisKunde") %>,"Familie":2,"Mitarbeiter":<%= request.getAttribute("preisMitarbeiter") %>}'
+	></ccm-parkhaus-9-1-8>
+</body>
 
 </body>
 </html>
