@@ -225,27 +225,27 @@
 		<table>
          <tr class="gray">
            <td> Parkhaus Umsatz </td>
-           <td> Betrag €</td>
+           <td>  </td>
          </tr>
          <tr class="orange">
            <td> Umsatzsteuer </td>
-           <td> Betrag €</td>
+           <td> Betrag </td>
          </tr>
          <tr>
            <td> - Fixkosten </td>
-           <td> Betrag €</td>
+           <td> Betrag </td>
          </tr>
          <tr>
            <td> - Personalkosten </td>
-           <td> Betrag €</td>
+           <td>  </td>
          </tr>
          <tr>
            <td> - Abschreibungen </td>
-           <td> Betrag €</td>
+           <td> Betrag </td>
          </tr>
          <tr class="green">
            <td> Gewinn </td>
-           <td> Betrag €</td>
+           <td> Betrag </td>
          </tr>
        </table>
 	</div>

@@ -51,12 +51,32 @@ public class Finanzen implements FinanzenIF {
 	}
 	
 	
-	// ###### METHODE ZUM ERRECHNEN DER UMSATZSTEUER
+	// ###### METHODE BERICHT FINANZAMT
 	
 	public double getUst() {
 		// Nimmt einen Umsatz an und errechnet die Umsatzsteuer
+		// getUmsatz * Umsatzsteuer in Prozent
 		
 		return 1.19;
+	}
+	
+	public int getKostenFix () {
+		// getUmsatz * kostenFix pauschale in Prozent
+		return 1;
+	}
+	
+	public int getKostenPersonal() {
+		// getUmsatz * kostenPersonal pauschale in Prozent
+		return 1;
+	}
+	
+	public int getKostenAbschreibungen() {
+		// getUmsatz * kostenAbschreibungen pauschale in Prozent
+		return 1;
+	}
+	
+	public int getGewinn() {
+		// getUmsatz - (getKostenFix + getKostenPersonal + getKostenAbschreibungen)
 	}
 
 

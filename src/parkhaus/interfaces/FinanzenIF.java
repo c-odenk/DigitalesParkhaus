@@ -19,5 +19,6 @@ public interface FinanzenIF {
 	// ###### METHODEN FINANZAMT
 	
 	public double getUst();
+	// public double get
 
 }
