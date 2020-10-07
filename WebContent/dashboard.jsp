@@ -52,7 +52,10 @@
 		    <i class="fas fa-info-circle"></i>
 		  </div>
 		  <div class="parkhaus">
+		  
 		      <ul>
+		      <!--  HIER MUSS EINE SCHLEIFE IMPLEMENTIERT WERDEN DIE FÜR JEDEN PARKPLATZ SPÄTER EIN <li> IN EINER <ul> EINFÜGT  -->
+		      
 		        <li class="parkplatz belegt"> </li>
 		        <li class="parkplatz belegt"> </li>
 		        <li class="parkplatz frei"> </li>
@@ -71,6 +74,7 @@
 		        <li class="parkplatz frei"> </li>
 		        <li class="parkplatz belegt"> </li>
 		      </ul>
+		      
 		  </div>
 		</div>
 	
@@ -91,6 +95,9 @@
 		          <th> Preis </th>
 		        </tr>
 		      </thead>
+		      
+		      <!--  HIER MUSS EINE SCHLEIFE IMPLEMENTIERT WERDEN DIE FÜR JEDEN PARKENDEN SPÄTER EINE TABLE REIHE EINFÜGT  -->
+		      
 		      <tbody>
 		        <tr>
 		          <td> 1 </td>
