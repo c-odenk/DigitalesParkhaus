@@ -12,7 +12,15 @@ public class Finanzen implements FinanzenIF {
 	private double preisKunde;
 	private double preisMitarbeiter;
 	
+	
+	/* Zum errechnen der Umsatzsteuer und dem Gewinn haben wir fiktive aber dennoch realitätsnahe Kosten kalkuliert */
+	
+	private double kostenFix;
+	private double kostenPersonal;
+	private double kostenAbschreibungen;
+	
 	private final double umsatzsteuer = 0.19;
+	
 	
 	// ###### KONSTRUKTOR
 	

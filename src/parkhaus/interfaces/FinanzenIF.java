@@ -15,5 +15,9 @@ public interface FinanzenIF {
 	
 	public double getPreisKunde();
 	public double getPreisMitarbeiter();
+	
+	// ###### METHODEN FINANZAMT
+	
+	public double getUst();
 
 }

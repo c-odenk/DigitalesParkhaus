@@ -80,9 +80,7 @@ header {
   justify-content: space-between;
   align-items: center; }
   .landing-content_col-1 {
-    width: 45%;
-    font-size: 18px;
-  	}
+    width: 45%; }
     .landing-content_col-1-info-box p {
       font-size: 20px;
       letter-spacing: 1px;
@@ -382,7 +380,7 @@ header {
     opacity: 1;
     visibility: visible; }
   .popup-taxes .popup {
-    width: 40%;
+    padding: 70px 120px;
     background-color: #F5F5F5;
     position: absolute;
     top: 50%;
@@ -390,8 +388,23 @@ header {
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
-    align-items: center;
-    height: 780px; }
+    align-items: center; }
+    .popup-taxes .popup table {
+      width: 100%;
+      font-size: 1.35rem;
+      letter-spacing: 1px; }
+      .popup-taxes .popup table tr td {
+        padding: 10px 0; }
+        .popup-taxes .popup table tr td:nth-of-type(1) {
+          padding-right: 250px; }
+      .popup-taxes .popup table .gray {
+        font-weight: 600; }
+      .popup-taxes .popup table .orange {
+        font-weight: 600;
+        color: #FF4500; }
+      .popup-taxes .popup table .green {
+        font-weight: 600;
+        color: #228B22; }
     .popup-taxes .popup .popup-close:link, .popup-taxes .popup .popup-close:visited {
       color: rgba(0, 0, 0, 0.8);
       position: absolute;
@@ -399,7 +412,7 @@ header {
       right: 2.5rem;
       display: inline-block;
       text-decoration: none;
-      font-size: 3rem;
+      font-size: 2.5rem;
       transition: all .2s; }
 
 /* ==========================================================================

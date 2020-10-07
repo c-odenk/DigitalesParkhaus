@@ -221,7 +221,33 @@
 
 <section class="popup-taxes" id="popup-taxes">
 	<div class="popup">
-		<a href="dashboard.html" class="popup-close"> &times; </a>
+		<a href="dashboard.jsp" class="popup-close"> &times; </a>
+		<table>
+         <tr class="gray">
+           <td> Parkhaus Umsatz </td>
+           <td> Betrag €</td>
+         </tr>
+         <tr class="orange">
+           <td> Umsatzsteuer </td>
+           <td> Betrag €</td>
+         </tr>
+         <tr>
+           <td> - Fixkosten </td>
+           <td> Betrag €</td>
+         </tr>
+         <tr>
+           <td> - Personalkosten </td>
+           <td> Betrag €</td>
+         </tr>
+         <tr>
+           <td> - Abschreibungen </td>
+           <td> Betrag €</td>
+         </tr>
+         <tr class="green">
+           <td> Gewinn </td>
+           <td> Betrag €</td>
+         </tr>
+       </table>
 	</div>
 </section>
 
