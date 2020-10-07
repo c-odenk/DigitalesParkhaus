@@ -22,18 +22,6 @@
 	
 </head>
 <body>
-
-	<ccm-parkhaus-9-1-8
-		name="WebParkhaus"
-		Max=15
-		server_url="http://localhost:8080/DigitalesParkhaus/Parkhaus"
-		extra_buttons='["sum", "avg", "count"]'
-		client_categories='["Kunde","Familie","Mitarbeiter"]'
-		price_factor='{"Kunde":1,"Familie":2,"Mitarbeiter":0}'
-		>
-	</ccm-parkhaus-9-1-8>
-		
-
 <!-- ################################################################################## -->
 <!-- ##########                1. REIHE: LOGO & MEN�                         ########## -->
 
