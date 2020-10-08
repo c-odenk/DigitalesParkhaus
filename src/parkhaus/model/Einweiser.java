@@ -76,4 +76,19 @@ public class Einweiser implements EinweiserIF
 		return max;
 	}
 	
+	public boolean isFree(int spot)
+	{
+		return platzBelegt[spot] == 0;
+	}
+	
+	public int getFree()
+	{
+		return (int) Arrays.stream(platzBelegt).filter(platz -> platz == 0).count();
+	}
+	
+	public int getOccupied()
+	{
+		return getFree() - getMax();
+	}
+	
 }

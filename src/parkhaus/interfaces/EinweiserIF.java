@@ -21,4 +21,10 @@ public interface EinweiserIF
 	public int getSize();
 	
 	public int getMax();
+	
+	public boolean isFree(int spot);
+	
+	public int getFree();
+	
+	public int getOccupied();
 }
