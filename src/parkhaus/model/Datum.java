@@ -15,8 +15,8 @@ public class Datum {
 	
 	// ###### FORMATE ANLEGEN
 	
-	static SimpleDateFormat zeitFormat  = new SimpleDateFormat("hh:mm:ss");
-	static SimpleDateFormat datumFormat = new SimpleDateFormat("dd.mm.yyy");
+	static SimpleDateFormat zeitFormat  = new SimpleDateFormat("HH:mm:ss");
+	static SimpleDateFormat datumFormat = new SimpleDateFormat("dd.MM.yyy");
 	
 	// Es lässt sich auch der aktuelle Wochentag anzeigen -> xxx = ew SimpleDateFormat("EEEE");
 	
