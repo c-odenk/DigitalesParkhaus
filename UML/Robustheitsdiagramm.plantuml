@@ -1,6 +1,5 @@
 
 @startuml
-folder "Erstellt von Emre Türker (etuerk2s)" {
 frame "rd Parkhaussystem" {
 	actor Kunde as K
 	actor Manager as M
@@ -40,6 +39,5 @@ frame "rd Parkhaussystem" {
 	
 	M --> SM
 	M --> CM
-}
 }
 @enduml

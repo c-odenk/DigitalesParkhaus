@@ -1,23 +1,37 @@
-
 @startuml
-folder "Erstellt von Emre Türker (etuerk2s)" {
 frame "cd Parkhaussystem" {
-abstract class View [[java:parkhausKlassen.View]] {
-	+void subscribe(Berechnung m)
-	+{abstract}void update()
+class AbstractPublisher [[java:parkhaus.model.AbstractPublisher]] {
+	+void addView(View v)
+	+void update()
 }
-class Berechnung [[java:parkhausKlassen.Berechnung]] {
+class View [[java:parkhaus.model.View]] {
 }
-View -l-> "1" Berechnung : model
-interface EinweiserIF [[java:parkhausInterfaces.EinweiserIF]] {
-	int enter(Auto in)
-	Auto leave(Auto out)
-	void addCar(Auto in)
-	List<Auto> getCars()
-	int getSize()
-	int getMax()
+AbstractPublisher -u-> "*" View : views
+class Parkhaus [[java:parkhaus.model.Parkhaus]] {
+	-{static}long serialVersionUID
+	-{static}int count
+	-{static}String state
+	+Parkhaus()
+	#void doGet(HttpServletRequest request, HttpServletResponse response)
+	#void doPost(HttpServletRequest request, HttpServletResponse response)
+	-{static}String getBody(HttpServletRequest request)
 }
-class Auto [[java:parkhausKlassen.Auto]] {
+class Berechnung [[java:parkhaus.model.Berechnung]] {
+}
+Parkhaus --> "1" Berechnung : calc
+class Einweiser [[java:parkhaus.model.Einweiser]] {
+}
+Parkhaus --> "1" Einweiser : guide
+class SumView [[java:parkhaus.model.SumView]] {
+}
+Parkhaus -d-> "1" SumView : sum
+class AvgView [[java:parkhaus.model.AvgView]] {
+}
+Parkhaus -d-> "1" AvgView : avg
+class HttpServlet [[java:javax.servlet.http.HttpServlet]] {
+}
+HttpServlet <|-- Parkhaus
+class Auto [[java:parkhaus.model.Auto]] {
 	-int parkplatz
 	-String ticket
 	+Auto()
@@ -27,71 +41,119 @@ class Auto [[java:parkhausKlassen.Auto]] {
 	+void setParkplatz(int p)
 	+void setTicket(String t)
 }
-interface AutoIF [[java:parkhausInterfaces.AutoIF]] {
+interface AutoIF [[java:parkhaus.interfaces.AutoIF]] {
 }
 AutoIF <|.. Auto
-class AutoIFTest [[java:parkhausTests.AutoIFTest]] {
+class ParkhausServlet [[java:parkhaus.controller.ParkhausServlet]] {
+	-{static}long serialVersionUID
+	+ParkhausServlet()
+	-void processPost(HttpServletRequest request, HttpServletResponse response)
+	-void processGet(HttpServletRequest request, HttpServletResponse response)
+	#void doGet(HttpServletRequest request, HttpServletResponse response)
+	#void doPost(HttpServletRequest request, HttpServletResponse response)
+}
+class Einweiser [[java:parkhaus.model.Einweiser]] {
+}
+ParkhausServlet --> "1" Einweiser : guide
+class Verwalter [[java:parkhaus.model.Verwalter]] {
+}
+ParkhausServlet --> "1" Verwalter : verwalter
+class HttpServlet [[java:javax.servlet.http.HttpServlet]] {
+}
+HttpServlet <|-- ParkhausServlet
+class SumView [[java:parkhaus.model.SumView]] {
+	~float sum
+	+float view()
+	+void update()
+}
+class View [[java:parkhaus.model.View]] {
+}
+View <|-u- SumView
+class Berechnung [[java:parkhaus.model.Berechnung]] {
+	~List<Float> costs
+	+Berechnung()
+	+void addCost(float cost)
+	+List<Float> getCosts()
+	+int getSize()
+}
+class AbstractPublisher [[java:parkhaus.model.AbstractPublisher]] {
+}
+AbstractPublisher <|-r- Berechnung
+interface BerechnungIF [[java:parkhaus.interfaces.BerechnungIF]] {
+}
+BerechnungIF <|.u. Berechnung
+class Verwalter [[java:parkhaus.model.Verwalter]] {
+	-int offenVon
+	-int offenBis
+	-int max
+	-float preisMitarbeiter
+	-float preisKunde
+	-boolean changed
+	+Verwalter()
+	+void setOpen(int set)
+	+void setClosed(int set)
+	+void setPreisMitarbeiter(float set)
+	+void setPreisKunde(float set)
+	+void setMax(int set)
+	+void setChange()
+	+int getOpen()
+	+int getClosed()
+	+int getMax()
+	+float getPreisMitarbeiter()
+	+float getPreisKunde()
+	+boolean getChanged()
+}
+interface VerwalterIF [[java:parkhaus.interfaces.VerwalterIF]] {
+}
+VerwalterIF <|.u. Verwalter
+class AutoIFTest [[java:parkhaus.tests.AutoIFTest]] {
 	~void testGetParkplatz()
 	~void testGetTicket()
 	~void testSetParkplatz()
 	~void testSetTicket()
 }
-class AutoIF [[java:parkhausInterfaces.AutoIF]] {
+class AutoIF [[java:parkhaus.interfaces.AutoIF]] {
 }
-AutoIFTest --> "1" AutoIF : test
-
-interface DashboardIF [[java:parkhausInterfaces.DashboardIF]] {
-	void setPreisKunde(float preis)
-	void setPreisMitarbeiter(float preis)
-	void seitZeit()
-	float getPreisKunde()
-	float getPreisMitarbeiter()
-	void getParkplatzFrei()
+AutoIFTest -l-> "1" AutoIF : a1
+class Datum [[java:parkhaus.model.Datum]] {
+	~{static}Date datum
+	~{static}SimpleDateFormat zeitFormat
+	~{static}SimpleDateFormat datumFormat
+	+{static}String test()
+	+{static}String zeitToString()
+	+{static}String datumToString()
 }
-class AbstractPublisher [[java:parkhausKlassen.AbstractPublisher]] {
-	+void addView(View v)
-	+void update()
+abstract class View [[java:parkhaus.model.View]] {
+	+void subscribe(Berechnung m)
+	+{abstract}void update()
 }
-class View [[java:parkhausKlassen.View]] {
+class Berechnung [[java:parkhaus.model.Berechnung]] {
 }
-AbstractPublisher -l-> "*" View : views
-class ParkhausServlet [[java:parkhausServlets.ParkhausServlet]] {
-	-{static}long serialVersionUID
-	-{static}int count
-	+ParkhausServlet()
-	#void doGet(HttpServletRequest request, HttpServletResponse response)
-	#void doPost(HttpServletRequest request, HttpServletResponse response)
-	-{static}String getBody(HttpServletRequest request)
+View --> "1" Berechnung : model
+class Finanzen [[java:parkhaus.model.Finanzen]] {
+	-double preisKunde
+	-double preisMitarbeiter
+	-double umsatz
+	-double kostenFix
+	-double kostenPersonal
+	-double kostenAbschreibungen
+	-double umsatzsteuer
+	+void setPreisKunde(float preis)
+	+void setPreisMitarbeiter(float preis)
+	+void setUmsatz(float sum)
+	+double getPreisKunde()
+	+double getPreisMitarbeiter()
+	+double getUmsatzSteuer()
+	+double getUmsatz()
+	+double getUst()
+	+double getKostenFix()
+	+double getKostenPersonal()
+	+double getGewinn()
 }
-class Berechnung [[java:parkhausKlassen.Berechnung]] {
+interface FinanzenIF [[java:parkhaus.interfaces.FinanzenIF]] {
 }
-ParkhausServlet -r-> "1" Berechnung : calc
-class Einweiser [[java:parkhausKlassen.Einweiser]] {
-}
-ParkhausServlet --> "1" Einweiser : guide
-class SumView [[java:parkhausKlassen.SumView]] {
-}
-ParkhausServlet -r-> "1" SumView : sum
-class AvgView [[java:parkhausKlassen.AvgView]] {
-}
-ParkhausServlet -r-> "1" AvgView : avg
-class HttpServlet [[java:javax.servlet.http.HttpServlet]] {
-}
-HttpServlet <|-- ParkhausServlet
-class TestKlasse [[java:parkhausKlassen.TestKlasse]] {
-}
-interface BerechnungIF [[java:parkhausInterfaces.BerechnungIF]] {
-	void addCost(float cost)
-	List<Float> getCosts()
-	int getSize()
-}
-interface AutoIF [[java:parkhausInterfaces.AutoIF]] {
-	int getParkplatz()
-	String getTicket()
-	void setParkplatz(int p)
-	void setTicket(String t)
-}
-class Einweiser [[java:parkhausKlassen.Einweiser]] {
+FinanzenIF <|.d. Finanzen
+class Einweiser [[java:parkhaus.model.Einweiser]] {
 	-int max
 	-int[] platzBelegt
 	+Einweiser()
@@ -101,76 +163,90 @@ class Einweiser [[java:parkhausKlassen.Einweiser]] {
 	+List<Auto> getCars()
 	+int getSize()
 	+int getMax()
+	+boolean isFree(int spot)
+	+int getFree()
+	+int getOccupied()
 }
-class Auto [[java:parkhausKlassen.Auto]] {
+class Auto [[java:parkhaus.model.Auto]] {
 }
-Einweiser -l-> "*" Auto : cars
-interface EinweiserIF [[java:parkhausInterfaces.EinweiserIF]] {
+Einweiser -d-> "*" Auto : cars
+interface EinweiserIF [[java:parkhaus.interfaces.EinweiserIF]] {
 }
 EinweiserIF <|.. Einweiser
-class EinweiserIFTest [[java:parkhausTests.EinweiserIFTest]] {
+interface EinweiserIF [[java:parkhaus.interfaces.EinweiserIF]] {
+	int enter(Auto in)
+	Auto leave(Auto out)
+	void addCar(Auto in)
+	List<Auto> getCars()
+	int getSize()
+	int getMax()
+	boolean isFree(int spot)
+	int getFree()
+	int getOccupied()
+}
+class EinweiserIFTest [[java:parkhaus.tests.EinweiserIFTest]] {
+	~int in
 	~void setUp()
 	~void testEnterAndSize()
 	~void testLeave()
 }
+class EinweiserIF [[java:parkhaus.interfaces.EinweiserIF]] {
+}
+EinweiserIFTest --> "1" EinweiserIF : e
 
-EinweiserIFTest --> "1" EinweiserIF : test
-
-class AvgView [[java:parkhausKlassen.AvgView]] {
+interface FinanzenIF [[java:parkhaus.interfaces.FinanzenIF]] {
+	void setPreisKunde(float preis)
+	void setPreisMitarbeiter(float preis)
+	void setUmsatz(float sum)
+	double getPreisKunde()
+	double getPreisMitarbeiter()
+	double getUmsatzSteuer()
+	double getUmsatz()
+	double getUst()
+	double getKostenFix()
+	double getKostenPersonal()
+	double getGewinn()
+}
+interface VerwalterIF [[java:parkhaus.interfaces.VerwalterIF]] {
+	void setOpen(int set)
+	void setClosed(int set)
+	void setMax(int set)
+	void setPreisMitarbeiter(float set)
+	void setPreisKunde(float set)
+	int getOpen()
+	int getClosed()
+	int getMax()
+	float getPreisMitarbeiter()
+	float getPreisKunde()
+}
+class AvgView [[java:parkhaus.model.AvgView]] {
 	~float avg
 	+float view()
 	+void update()
 }
-class View [[java:parkhausKlassen.View]] {
+class View [[java:parkhaus.model.View]] {
 }
 View <|-u- AvgView
-class Berechnung [[java:parkhausKlassen.Berechnung]] {
-	~List<Float> costs
-	+Berechnung()
-	+void addCost(float cost)
-	+List<Float> getCosts()
-	+int getSize()
+interface BerechnungIF [[java:parkhaus.interfaces.BerechnungIF]] {
+	void addCost(float cost)
+	List<Float> getCosts()
+	int getSize()
 }
-class AbstractPublisher [[java:parkhausKlassen.AbstractPublisher]] {
-}
-AbstractPublisher <|-l- Berechnung
-interface BerechnungIF [[java:parkhausInterfaces.BerechnungIF]] {
-}
-BerechnungIF <|.r. Berechnung
-class SumView [[java:parkhausKlassen.SumView]] {
-	~float sum
-	+float view()
-	+void update()
-}
-class View [[java:parkhausKlassen.View]] {
-}
-View <|-u- SumView
-class DashboardServlet [[java:parkhausServlets.DashboardServlet]] {
-	-{static}long serialVersionUID
-	-int offenVon
-	-int offenBis
-	-int parkplatzMax
-	-float preisKunde
-	-float preisMitarbeiter
-	+void doPost(HttpServletRequest req, HttpServletResponse res)
-}
-class HttpServlet [[java:javax.servlet.http.HttpServlet]] {
-}
-HttpServlet <|-u- DashboardServlet
-class BerechnungIFTest [[java:parkhausTests.BerechnungIFTest]] {
+class BerechnungIFTest [[java:parkhaus.tests.BerechnungIFTest]] {
 	~void setUp()
 	~void testAddCost()
 	~void testGetSum()
 	~void testGetAvg()
 }
-class Berechnung [[java:parkhausKlassen.Berechnung]] {
+class Berechnung [[java:parkhaus.model.Berechnung]] {
 }
-BerechnungIFTest -u-> "1" Berechnung : test
-class SumView [[java:parkhausKlassen.SumView]] {
-}
+BerechnungIFTest -l-> "1" Berechnung : test
 
-class AvgView [[java:parkhausKlassen.AvgView]] {
-}
+interface AutoIF [[java:parkhaus.interfaces.AutoIF]] {
+	int getParkplatz()
+	String getTicket()
+	void setParkplatz(int p)
+	void setTicket(String t)
 }
 }
 @enduml

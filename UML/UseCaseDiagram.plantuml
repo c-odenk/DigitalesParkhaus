@@ -1,6 +1,5 @@
 
 @startuml
-folder "Erstellt von Emre Türker (etuerk2s)" {
 frame "ucd Parkhaussystem" {
 	actor :Kunde: as K
 	actor :Familie: as F
@@ -49,7 +48,6 @@ frame "ucd Parkhaussystem" {
 	MG -d-> SA
 	MG -d-> AP
 	MG -d-> EA
-}
 }
 
 @enduml

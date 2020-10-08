@@ -8,15 +8,15 @@
 
 ## [Minimum Viable Product](https://docs.google.com/spreadsheets/d/1JZEjMvAQffLY5O3Ah9xGBvupNgs64IdHzFDhoZhPXUs "MVP")
 
-## [UML Use Case Diagram](https://drive.google.com/file/d/1gb4MqTr6aJeMQMYSijvwuWCosdhVvpGh/view "Use Case Diagram")
+## [UML Use Case Diagram](https://drive.google.com/file/d/1vYmgmGlQo53nuieDZYqKLtv5gGQWVCd4/view "Use Case Diagram")
 
-## [Robustheitsdiagramm](https://drive.google.com/file/d/1pZhMqLIQUqxRA5wok_3oGT31l0NtQU2s/view "Robustheitsdiagramm")
+## [Robustheitsdiagramm](https://drive.google.com/file/d/1D_z0uWpPyp-GxMu8lm49Kk0fcsE-ErIa/view "Robustheitsdiagramm")
 
-## [UML Klassendiagramm](https://drive.google.com/file/d/1bgU_beDHC88JW5cRhXlMnjCpT2-RI29c/view "Class Diagram")
+## [UML Klassendiagramm](https://drive.google.com/file/d/1XwZvl2TytigbkNA3jLze21WGeSaiSxVd/view "Class Diagram")
 
-## [UML Sequenzdiagramm](https://drive.google.com/file/d/1AfAbO0TZBI5dDG3IvV8rFiX7l4T_a-PH "Sequenzdiagramm")
+## [UML Sequenzdiagramm](https://drive.google.com/file/d/1CJndnMN5fS0Dmol6SnLKZIQW_YR0xpgM/view "Sequenzdiagramm")
 
-## [UML Aktivitätsdiagramm](https://drive.google.com/file/d/1jOPUD75gwiIsIGWV5hl8loKH_YpWlIwr "Aktivitätsdiagramm")
+## [UML Aktivitätsdiagramm](https://drive.google.com/file/d/18cv2PkZZvIaulWsYGNpAzFc0A_7-Ukfl/view "Aktivitätsdiagramm")
 
 ## [Java Interfaces](https://github.com/c-odenk/DigitalesParkhaus/tree/master/src/parkhaus/interfaces "Interfaces")
 
@@ -26,10 +26,10 @@
 
 ## Eingesetzte Patterns... WIP
 
-## Zielkonflikte... WIP
+## [Zielkonflikte](https://docs.google.com/document/d/18W0gJ47JhngHU2u3eNluROjXeKecLGVHMMW9waUYTuc "Konflikte")
 
 ## Iterationsbericht... WIP
 
 ## Projektprotokoll... WIP
 
-## Resümee und Fazit... WIP
+## [Resümee und Fazit](https://docs.google.com/document/d/1xvxnVBVdxXXXxNWHvp8ESoiIHeiysmu8vvf-VeAJImw "Fazit")
