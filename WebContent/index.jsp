@@ -41,7 +41,7 @@
 <section class="landing-content">
 	<div class="landing-content_col-1">
 		<div class="landing-content_col-1_info-box">
-			<p> Parkhaus von Projektgruppe #32. Es ist der <b> <%= Datum.datumToString() %> </b> <b> <%= java.util.Calendar.getInstance().getTime() %> </b> </p>
+			<p> Parkhaus von Projektgruppe #32. Es ist der <b> <%= Datum.datumToString() %> </b> <b> <%= Datum.zeitToString() %> </b> </p>
 	    	<p> Geoeffnet von <b> 06 Uhr </b> bis <b> 24 Uhr </b>. Aktuell sind noch <b> 15 </b> von <b> 15 </b> Parkplaetzen frei. </p>
 		</div>
 	</div>
