@@ -9,6 +9,9 @@
 var chartUmsatzObject     = document.getElementById("chartUmsatz");
 var chartAuslastungObject = document.getElementById("chartAuslastung");
 
+var free = document.getElementById("free");
+var occupied = document.getElementById("occupied");
+
 var chartUmsatz = new Chart(chartUmsatzObject, {
 
   type: 'line',
@@ -44,7 +47,7 @@ var chartAuslastung = new Chart(chartAuslastungObject, {
       label: "Parkhausauslastung",
       backgroundColor: ["rgba(65, 105, 225, 1)", "#F5F5F5"],
       borderColor: '#fff',
-      data: ["72", "28"]
+      data: [free.value, occupied.value]
     }]
   }
 });

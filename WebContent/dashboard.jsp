@@ -43,6 +43,8 @@
 
 <section class="dashboard">
 
+<% int free = (Integer) request.getAttribute("free"); %>
+
 	<div class="dashboard_col-1">
 	
 		<div class="dashboard_col-1_rowBig">
@@ -54,33 +56,48 @@
 		  
 		      <ul>
 		      <!--  HIER MUSS EINE SCHLEIFE IMPLEMENTIERT WERDEN DIE FÜR JEDEN PARKPLATZ SPÄTER EIN <li> IN EINER <ul> EINFÜGT  -->
-		      
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz frei"> </li>
-		        <li class="parkplatz frei"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz frei"> </li>
-		        <li class="parkplatz frei"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz frei"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz frei"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz belegt"> </li>
-		        <li class="parkplatz frei"> </li>
-		        <li class="parkplatz belegt"> </li>
+		      	<%for(int i = 0; i < (Integer) request.getAttribute("max");i++) {
+		      	  boolean slot = (Boolean) request.getAttribute("platz" + i);
+		      	  if(slot) {%>
+		      	  <li class="parkplatz  frei"></li> 
+		    	  <% } else { %> 
+		    	  <li class="parkplatz belegt"></li><%}
+		      	}%>
+		      	
 		      </ul>
-		      
 		  </div>
 		</div>
 		
-		<div class="dashboard_col-1_rowBig">
+	    <div class="dashboard_col-1_rowBig">
 		  <div class="head">
 		    <h2>  Uebersicht Parkhauskunden: </h2>
 		    <i class="fas fa-info-circle"></i>
+		  </div>
+		  <div class="status-tabelle">
+		    <table>
+		      <thead>
+		        <tr>
+		          <th> Nr </th>
+		          <th> Von </th>
+		          <th> Bis </th>
+		          <th> Dauer </th>
+		          <th> Ticket </th>
+		          <th> Preis </th>
+		        </tr>
+		      </thead>
+		      
+		      <!--  HIER MUSS EINE SCHLEIFE IMPLEMENTIERT WERDEN DIE FÜR JEDEN PARKENDEN SPÄTER EINE TABLE REIHE EINFÜGT  -->
+		      <tbody>
+		        <tr>
+		          <td><%=request.getAttribute("count")%> </td>
+		          <td> <%=request.getAttribute("von")%> </td>
+		          <td> <%=request.getAttribute("bis")%>  </td>
+		          <td> <%=request.getAttribute("dauer")%>  </td>
+		          <td> <%=request.getAttribute("ticket")%>  </td>
+		          <td> <%=request.getAttribute("preis")%>  </td>
+		        </tr>
+		      </tbody>
+		    </table>
 		  </div>
 		</div>
 	</div>
@@ -100,12 +117,14 @@
 		 </div>
 		 <canvas id="chartUmsatz"></canvas>
 		</div>
-	
+
 		<div class="dashboard_col-2_rowBig">
 		  <div class="head">
 		    <h2> Parkhausauslastung in Prozent: </h2>
 		    <i class="fas fa-info-circle"></i>
 		   </div>
+		   <input type="hidden" name="free" value='<%=(Integer) request.getAttribute("free") %>' >
+		   <input type="hidden" name="occupied" value='<%=(Integer) request.getAttribute("occupied") %>' >
 		   <canvas id="chartAuslastung"></canvas>
 		</div>
 		
