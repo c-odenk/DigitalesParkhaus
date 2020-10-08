@@ -11,6 +11,7 @@ public class Finanzen implements FinanzenIF {
 	
 	private double preisKunde;
 	private double preisMitarbeiter;
+	private double umsatz;
 	
 	
 	/* Zum errechnen der Umsatzsteuer und dem Gewinn haben wir fiktive aber dennoch realitätsnahe Kosten kalkuliert */
@@ -28,13 +29,18 @@ public class Finanzen implements FinanzenIF {
 	
 	// ###### SET METHODEN
 
-	public void setPreisKunde() {
+	public void setPreisKunde(float preis) {
 		// Nimmt den Preis von Servlet an. Servlet erhält den Preis von index.jsp
-		
+		preisKunde = preis;
 	}
 
-	public void setPreisMitarbeiter() {
-		// Nimmt den Preis von Servlet an. Servlet erhält den Preis von index.jsp		
+	public void setPreisMitarbeiter(float preis) {
+		// Nimmt den Preis von Servlet an. Servlet erhält den Preis von index.jsp
+		preisMitarbeiter = preis;
+	}
+	
+	public void setUmsatz(float sum) {
+		umsatz = sum;
 	}
 	
 	
@@ -50,6 +56,14 @@ public class Finanzen implements FinanzenIF {
 		return preisMitarbeiter;
 	}
 	
+	public double getUmsatzSteuer() {
+		return umsatzsteuer;
+	}
+	
+	public double getUmsatz() {
+		return umsatz;
+	}
+	
 	
 	// ###### METHODE BERICHT FINANZAMT
 	
@@ -57,26 +71,23 @@ public class Finanzen implements FinanzenIF {
 		// Nimmt einen Umsatz an und errechnet die Umsatzsteuer
 		// getUmsatz * Umsatzsteuer in Prozent
 		
-		return 1.19;
+		return getUmsatz() * getUmsatzSteuer();
 	}
 	
-	public int getKostenFix () {
+	public double getKostenFix () {
 		// getUmsatz * kostenFix pauschale in Prozent
-		return 1;
+		return getUmsatz() * getPreisKunde();
 	}
 	
-	public int getKostenPersonal() {
+	public double getKostenPersonal() {
 		// getUmsatz * kostenPersonal pauschale in Prozent
-		return 1;
+		return getUmsatz() * getPreisMitarbeiter();
 	}
 	
-	public int getKostenAbschreibungen() {
-		// getUmsatz * kostenAbschreibungen pauschale in Prozent
-		return 1;
-	}
 	
-	public int getGewinn() {
-		// getUmsatz - (getKostenFix + getKostenPersonal + getKostenAbschreibungen)
+	public double getGewinn() {
+		// getUmsatz - (getKostenFix + getKostenPersonal)
+		return getUmsatz() - (getKostenFix() - getKostenPersonal());
 	}
 
 

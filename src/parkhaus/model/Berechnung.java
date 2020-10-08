@@ -11,6 +11,7 @@ import parkhaus.interfaces.BerechnungIF;
 public class Berechnung extends AbstractPublisher implements BerechnungIF
 {
 	List<Float> costs = new ArrayList<>();
+	Finanzen f = new Finanzen();
 	
 	public Berechnung()
 	{
