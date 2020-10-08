@@ -4,7 +4,7 @@
 
 ## [Liste der User Stories](https://docs.google.com/document/d/1fvVkNAOWO6f_JcQBJ8gT_O-HNh-_FG-8VEWVVm8AX6E "User Stories")
 
-## [Kanban Board](https://drive.google.com/file/d/199BN8iinP4C-ie_osDmsWWBLGpw4U5Sl/view "Kanban Board") (vorläufig)
+## [Kanban Board](https://drive.google.com/file/d/199BN8iinP4C-ie_osDmsWWBLGpw4U5Sl/view "Kanban Board")
 
 ## [Minimum Viable Product](https://docs.google.com/spreadsheets/d/1JZEjMvAQffLY5O3Ah9xGBvupNgs64IdHzFDhoZhPXUs "MVP")
 
@@ -24,12 +24,8 @@
 
 ## [Java Klassen](https://github.com/c-odenk/DigitalesParkhaus/tree/master/src/parkhaus/model "Klassen")
 
-## Eingesetzte Patterns... WIP
-
 ## [Zielkonflikte](https://docs.google.com/document/d/18W0gJ47JhngHU2u3eNluROjXeKecLGVHMMW9waUYTuc "Konflikte")
 
-## Iterationsbericht... WIP
-
-## Projektprotokoll... WIP
+## [Projektprotokoll](https://drive.google.com/file/d/1DswbLYyGwQ3pTiaOpmOl1_SKQ834ZTzK/view "Protokoll")
 
 ## [Resümee und Fazit](https://docs.google.com/document/d/1xvxnVBVdxXXXxNWHvp8ESoiIHeiysmu8vvf-VeAJImw "Fazit")
