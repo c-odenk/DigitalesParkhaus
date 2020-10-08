@@ -9,14 +9,14 @@ import java.util.Date;
 
 public class Datum {
 	
-	// ###### ERSTELLT EIN ZEITOBJEKT
+	 // ###### ERSTELLT EIN ZEITOBJEKT
 	
-	Date datum = new Date();
+	static Date datum = new Date();
 	
 	// ###### FORMATE ANLEGEN
 	
-	SimpleDateFormat zeitFormat  = new SimpleDateFormat("hh:mm:ss");
-	SimpleDateFormat datumFormat = new SimpleDateFormat("dd.mm.yyy");
+	static SimpleDateFormat zeitFormat  = new SimpleDateFormat("hh:mm:ss");
+	static SimpleDateFormat datumFormat = new SimpleDateFormat("dd.mm.yyy");
 	
 	// Es lässt sich auch der aktuelle Wochentag anzeigen -> xxx = ew SimpleDateFormat("EEEE");
 	
@@ -30,11 +30,11 @@ public class Datum {
 	// #### AUSGABEMETHODEN
 	
 	public static String zeitToString() {
-		return "DatumToString";
+		return zeitFormat.format(datum);
 	}
 	
 	public static String datumToString() {
-		return "DatumToString";
+		return datumFormat.format(datum);
 	}
 	
 }
